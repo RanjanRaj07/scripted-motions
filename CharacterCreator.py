@@ -78,7 +78,7 @@ class CharacterCreator:
         json.dump(action_data, f, indent=4)
         f.close()
 
-subbaRao = CharacterCreator('skeleton_human_male', 'D:\phani')
+subbaRao = CharacterCreator('skeleton_human_male', 'yourFilePath')
 subbaRao.save()
 subbaRao.savePose('SubbaRao')
 subbaRao.saveAction('AppaRao', 5, 20)
