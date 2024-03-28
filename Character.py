@@ -51,5 +51,6 @@ class Character:
                                 
                         bone.keyframe_insert(data_path=trans_key, index=int(axis_key), frame=int(frame_key) + start_frame)
 
-subbaRao = Character('skeleton_human_male','yourFilePath')
-subbaRao.loadCharacter()
+subbaRao = Character('skeleton_human_male','C:/Users/ranja/Desktop/SciptedMotions/SM')
+#subbaRao.loadCharacter()
+subbaRao.loadPose('SubbaRao')
