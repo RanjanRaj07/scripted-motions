@@ -21,9 +21,15 @@
 
     ],
     "ner":[
-      "MEDICALCONDITION",
-      "MEDICINE",
-      "PATHOGEN"
+      "ACTION",
+      "ANGLE",
+      "BODY_PART",
+      "CHARACTER",
+      "DIRECTION",
+      "DURATION",
+      "END_POSE",
+      "ITERATION",
+      "START_POSE"
     ]
   },
   "pipeline":[
@@ -38,27 +44,57 @@
 
   ],
   "performance":{
-    "ents_f":0.987804878,
-    "ents_p":0.987804878,
-    "ents_r":0.987804878,
+    "ents_f":0.7814569536,
+    "ents_p":0.7972972973,
+    "ents_r":0.7662337662,
     "ents_per_type":{
-      "MEDICINE":{
+      "CHARACTER":{
         "p":1.0,
+        "r":0.9523809524,
+        "f":0.9756097561
+      },
+      "ACTION":{
+        "p":0.7307692308,
+        "r":0.8260869565,
+        "f":0.7755102041
+      },
+      "ITERATION":{
+        "p":0.8,
+        "r":0.8,
+        "f":0.8
+      },
+      "DIRECTION":{
+        "p":0.7,
+        "r":0.6363636364,
+        "f":0.6666666667
+      },
+      "ANGLE":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "END_POSE":{
+        "p":0.75,
         "r":1.0,
-        "f":1.0
+        "f":0.8571428571
       },
-      "MEDICALCONDITION":{
-        "p":0.98,
-        "r":0.98,
-        "f":0.98
+      "START_POSE":{
+        "p":0.5,
+        "r":1.0,
+        "f":0.6666666667
       },
-      "PATHOGEN":{
-        "p":0.9833333333,
-        "r":0.9833333333,
-        "f":0.9833333333
+      "DURATION":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "BODY_PART":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
       }
     },
-    "tok2vec_loss":382.5690433939,
-    "ner_loss":271.4802633585
+    "tok2vec_loss":228.2638859958,
+    "ner_loss":8907.7026163124
   }
 }

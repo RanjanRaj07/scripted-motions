@@ -4,6 +4,7 @@ import os
 
 model_path = './nlp-model/model-best'
 
+
 def nlp_ner():
     ipText = input('enter the Text sentence\n')
     usenlp = UseNLP()
