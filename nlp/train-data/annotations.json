@@ -1,0 +1,55 @@
+{
+    "classes":
+        ["CHARACTER","ACTION","ITERATION","ANGLE","DURATION","DIRECTION","START_POSE","END_POSE","BODY_PART"],
+    "annotations":
+        [
+            ["Raju walks 3 steps forward, turns 30 deg clockwise, runs for 10 secs and stands.\r",
+                { 
+                    "entities":
+                        [
+                            [0,4,"CHARACTER"],
+                            [5,10,"ACTION"],
+                            [11,18,"ITERATION"],
+                            [19,26,"DIRECTION"],
+                            [28,33,"ACTION"],
+                            [34,40,"ANGLE"],
+                            [41,50,"DIRECTION"],
+                            [52,56,"ACTION"],
+                            [61,68,"ITERATION"],
+                            [73,79,"ACTION"]
+                        ]
+                }
+            ],
+            ["Chutki comes to stand pose from sit pose in 1sec.\r",
+                {
+                    "entities":
+                        [
+                            [0,6,"CHARACTER"],
+                            [16,26,"END_POSE"],
+                            [32,40,"START_POSE"],
+                            [44,48,"DURATION"]
+                        ]
+                }
+            ],
+            ["Bheem lifts his left hand.\r",
+                {
+                    "entities":
+                        [
+                            [0,5,"CHARACTER"],
+                            [6,11,"ACTION"],
+                            [16,25,"BODY_PART"]
+                        ]
+                }
+            ],
+            ["Kaliya looks at chutki.",
+                {
+                    "entities":
+                        [
+                            [0,6,"CHARACTER"],
+                            [7,15,"ACTION"],
+                            [16,22,"CHARACTER"]
+                        ]
+                }
+            ]
+    ]
+}
