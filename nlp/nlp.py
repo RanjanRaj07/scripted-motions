@@ -1,16 +1,28 @@
-from TrainNLP import TrainNLP
-from UseNLP import UseNLP
+#from TrainNLP import TrainNLP
+#from UseNLP import UseNLP
+import TrainNLP
+import UseNLP
 import os
+import sys
 
 model_path = './nlp-model/model-best'
 
 
 def nlp_ner():
-    ipText = input('enter the Text sentence\n')
+    ipText = sys.argv
+    ipText.pop(0)
+    text = ''
+    for word in ipText:
+        text += word
+        text += ' '
     usenlp = UseNLP()
-    entities_dict = usenlp.getner(ipText)
+    text = text.split(".")
+    output = []
+    for line in text :
+        output.append(usenlp.getner(line))
+    # entities_dict = usenlp.getner(ipText)
     print('The obtained named entities from the model are')
-    print(entities_dict)
+    print(output)
 
 if os.path.exists(model_path):
     print('model exists\n')

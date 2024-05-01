@@ -18,6 +18,9 @@ class Character:
 
     def load(self):  # Loads model into the Scene.
         if bpy.data.objects.get("skeleton_" + self.name) == None:
+            if bpy.context.active_object != None:
+                bpy.ops.object.mode_set(mode='OBJECT')
+                bpy.ops.object.select_all(action='DESELECT')
             model_path = os.path.join(self.path, "model", self.name + ".blend")
             with bpy.data.libraries.load(model_path) as (data_from, data_to):
                 data_to.objects = [
@@ -31,15 +34,24 @@ class Character:
 
             skeleton = bpy.data.objects.get("skeleton_" + self.name)
             bpy.context.scene.frame_set(0)
-            skeleton.animation_data.action.fcurves.clear()
+            # skeleton.animation_data.action.fcurves.clear()
+            bpy.context.view_layer.objects.active = skeleton
+            bpy.ops.object.select_all(action='DESELECT')
 
     def loadPose(self, poseName):  # Loads pose to model at current frame.
+        if bpy.context.active_object != None:
+            bpy.ops.object.mode_set(mode='OBJECT')
+            bpy.ops.object.select_all(action='DESELECT')
+
+        skeleton = bpy.data.objects["skeleton_" + self.name]
+        if skeleton == None:
+            return
+        
         file = open(os.path.join(
             self.path, "predef_poses", poseName + '.json'), 'r')
 
         pose_data = json.load(file)
 
-        skeleton = bpy.data.objects["skeleton_" + self.name]
         bpy.context.view_layer.objects.active = skeleton
         bpy.ops.object.mode_set(mode='POSE')
 
@@ -56,13 +68,22 @@ class Character:
                 rot = pose_data[key]['rotation']
                 bone.rotation_euler = (rot['x'], rot['y'], rot['z'])
 
-    def loadAction(self, actionName):  # Loads action at current frame.
+        bpy.ops.object.mode_set(mode='OBJECT')
+        bpy.ops.object.select_all(action='DESELECT')
+
+    def loadAction(self, actionName):
+        skeleton = bpy.data.objects["skeleton_" + self.name]
+        if skeleton == None:
+            return
         f = open(os.path.join(self.path, "predef_actions",
                  actionName + '.json'), 'r')
 
         action_data = json.load(f)
 
-        skeleton = bpy.data.objects["skeleton_" + self.name]
+        if bpy.context.active_object != None:
+            bpy.ops.object.mode_set(mode='OBJECT')
+            bpy.ops.object.select_all(action='DESELECT')
+
         bpy.context.view_layer.objects.active = skeleton
         bpy.ops.object.mode_set(mode='POSE')
 
@@ -73,99 +94,101 @@ class Character:
         locr = extract_to_array(skeleton.pose.bones['root'].location)
         rotr = extract_to_array(skeleton.pose.bones['root'].rotation_euler)
 
-        for key in action_data.keys():
-            bone = skeleton.pose.bones[key]
-            bone.rotation_mode = 'XYZ'
-            if key != 'root':
-                for trans_key in action_data[key].keys():
-                    for axis_key in action_data[key][trans_key].keys():
-                        for frame_key in action_data[key][trans_key][axis_key].keys():
-                            bpy.context.scene.frame_set(
-                                int(frame_key) + start_frame)
+        if skeleton.animation_data == None:
+            skeleton.animation_data_create()
+            skeleton.animation_data.action = bpy.data.actions.new(
+                name=self.name + "_Action")
 
-                            val = action_data[key][trans_key][axis_key][frame_key]
+        if skeleton.animation_data.action == None:
+            skeleton.animation_data.action = bpy.data.actions.new(
+                name=self.name + "_Action")
 
-                            match trans_key:
-                                case "location":
-                                    bone.location[int(axis_key)] = val
-                                case "rotation_euler":
-                                    bone.rotation_euler[int(
-                                        axis_key)] = val
+        fcurves = skeleton.animation_data.action.fcurves
+        root_frames = set()
+        root_action_data = {}
+        for fcurve in action_data:
+            if fcurve[0].split("\"")[1] != 'root':
+                if fcurves.find(data_path=fcurve[0], index=int(fcurve[1])) == None:
+                    fc = fcurves.new(data_path=fcurve[0], index=int(fcurve[1]))
+                else:
+                    fc = fcurves.find(
+                        data_path=fcurve[0], index=int(fcurve[1]))
 
-                            bone.keyframe_insert(data_path=trans_key, index=int(
-                                axis_key), frame=int(frame_key) + start_frame)
+                for pnt in range(len(fcurve[2])):
+                    co = fcurve[2][pnt]
+                    fc.keyframe_points.insert(
+                        int(co[0]) + start_frame, float(co[1]))
+            else:
+                trans_name = fcurve[0].split(".")[2]
+                if trans_name not in root_action_data:
+                    root_action_data[trans_name] = {}
+                index = int(fcurve[1])
+                if index not in root_action_data[trans_name]:
+                    root_action_data[trans_name][index] = {}
 
-        frames = set()
-        for trans_key in action_data['root'].keys():
-            for axis_key in action_data['root'][trans_key].keys():
-                for frame_key in action_data['root'][trans_key][axis_key]:
-                    frames.add(int(frame_key))
+                for frame in fcurve[2]:
+                    root_action_data[trans_name][index][int(
+                        frame[0])+start_frame] = frame[1]
 
-        frames = list(frames)
-        frames.sort()
+                for pnt in range(len(fcurve[2])):
+                    co = fcurve[2][pnt]
+                    root_frames.add(int(co[0]) + start_frame)
 
-        def getValueAtFrame(arm_name, translation, frame_no, axis):
-            if str(frames[frame_no]) in action_data[arm_name][translation][axis].keys():
-                val = action_data[arm_name][translation][axis][str(
-                    frames[frame_no])]
+        root_frames = list(root_frames)
+        root_frames.sort()
+
+        def getValueAtFrame(translation, frame_no, axis):
+            if root_frames[frame_no] in root_action_data[translation][axis].keys():
+                val = root_action_data[translation][axis][
+                    root_frames[frame_no]]
             else:
                 val = None
-            return val if val != None else getValueAtFrame(arm_name, translation, frame_no - 1, axis)
+            return val if val != None else getValueAtFrame(translation, frame_no - 1, axis)
 
         root_co_ordinates = {}
 
-        for frame_no in range(len(frames)):
-            root_co_ordinates[int(frames[frame_no])] = {}
+        for frame_no in range(len(root_frames)):
+            root_co_ordinates[root_frames[frame_no]] = {}
             for trans in ['location', 'rotation_euler']:
                 val = {}
                 for axis in range(3):
                     val[axis] = getValueAtFrame(
-                        'root', trans, frame_no, str(axis))
-                root_co_ordinates[int(frames[frame_no])][trans] = val
-
-        root = skeleton.pose.bones['root']
+                        trans, frame_no, axis)
+                root_co_ordinates[root_frames[frame_no]][trans] = val
 
         for frame in root_co_ordinates:
             init_angle = rotr[2]
             pos = root_co_ordinates[frame]['location']
             rot = root_co_ordinates[frame]['rotation_euler']
             pos = [
-                pos[0] * math.cos(init_angle) - pos[1] * math.sin(init_angle),
-                pos[1] * math.cos(init_angle) + pos[0] * math.sin(init_angle),
-                pos[2]
+                pos[0] * math.cos(init_angle) - pos[1] *
+                math.sin(init_angle) + locr[0],
+                pos[1] * math.cos(init_angle) + pos[0] *
+                math.sin(init_angle) + locr[1],
+                pos[2] + locr[2]
             ]
-            for axis in range(3):
-                root.location[axis] = pos[axis] + locr[axis]
-                root.rotation_euler[axis] = rot[axis] + rotr[axis]
+            rot = [
+                rot[0] + rotr[0],
+                rot[1] + rotr[1],
+                rot[2] + rotr[2]
+            ]
+            root_co_ordinates[frame]['location'] = pos
+            root_co_ordinates[frame]['rotation_euler'] = rot
 
-                for translation in ['location', 'rotation_euler']:
-                    root.keyframe_insert(data_path=translation,
-                                        index=axis, frame=frame + start_frame)
-            
-            end_frame = frame + start_frame
+        for trans in ['location', 'rotation_euler']:
+            for index in range(3):
+                if fcurves.find(data_path="pose.bones[\"root\"]." + trans, index=index) == None:
+                    fc = fcurves.new(
+                        data_path="pose.bones[\"root\"]." + trans, index=index)
+                else:
+                    fc = fcurves.find(
+                        data_path="pose.bones[\"root\"]." + trans, index=index)
+                for frame in root_co_ordinates:
+                    co = [frame, root_co_ordinates[frame][trans][index]]
+                    fc.keyframe_points.insert(co[0], co[1])
+                    end_frame = co[0]
 
         bpy.context.scene.frame_set(end_frame)
-
-
-def walk_from_stading(character, num_of_steps):
-    if num_of_steps <= 0:
-        print('Number of steps should be 1 or more.')
-    else:
-        character.loadAction('standing_to_walk_right')
-        step_num = 1
-        while step_num < num_of_steps:
-            if step_num % 2 != 0:
-                character.loadAction('walk_right_to_left')
-            else:
-                character.loadAction('walk_left_to_right')
-            step_num += 1
-        if step_num % 2 != 0:
-            character.loadAction('walk_right_to_standing')
-        else:
-            character.loadAction('walk_left_to_standing')
-
-
-subbaRao = Character('SubbaRao', '')
-subbaRao.load()
-walk_from_stading(subbaRao, 4)
-
+        bpy.ops.object.mode_set(mode='OBJECT')
+        bpy.ops.object.select_all(action='DESELECT')
+# ------------------------------------------

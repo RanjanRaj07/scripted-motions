@@ -2,7 +2,7 @@ import os
 import bpy
 import json
 
-
+# This class
 class CharacterCreator:
 
     def __init__(self, name, path):
@@ -50,12 +50,8 @@ class CharacterCreator:
 
         data_blocks = {
             obj for obj in bpy.data.objects if obj.name.endswith(self.name)}
-        print(data_blocks)
 
         bpy.data.libraries.write(filepath, data_blocks)
-
-        # bpy.ops.wm.save_as_mainfile(filepath=os.path.join(
-        #     self.path, "model", self.name + ".blend"), copy=True)
 
         f = open(os.path.join(self.path, "data.json"),
                  'w', encoding='utf-8')
@@ -100,36 +96,24 @@ class CharacterCreator:
 
         f = open(os.path.join(self.path, "predef_actions",
                  actionName + '.json'), 'w', encoding='utf-8')
-        action_data = {}
+        
+        action_data = []
 
         fcurves = skeleton.animation_data.action.fcurves
 
         for fcurve in fcurves:
-            data_path = fcurve.data_path
-            bone_name = data_path.split("\"")[1]
-
-            if bone_name not in action_data:
-                action_data[bone_name] = {}
-            trans_name = data_path.split(".")[2]
-
-            if trans_name not in action_data[bone_name]:
-                action_data[bone_name][trans_name] = {}
-
-            index = fcurve.array_index
-
-            if index not in action_data[bone_name][trans_name]:
-                action_data[bone_name][trans_name][index] = {}
-
+            keyframe_points = []
+            
             for keyframe in fcurve.keyframe_points:
                 if start_frame <= keyframe.co[0] <= end_frame:
-                    action_data[bone_name][trans_name][index][int(
-                        keyframe.co[0] - start_frame)] = round(keyframe.co[1], 3)
+                    keyframe_points.append([keyframe.co[0] - start_frame,round(keyframe.co[1], 3)])
+            
+            action_data.append([fcurve.data_path,fcurve.array_index,keyframe_points])
 
         json.dump(action_data, f, indent=4)
         f.close()
 
-
-#subbaRao = CharacterCreator('SubbaRao', '')
+subbaRao = CharacterCreator('SubbaRao', 'D:\phani')
 #subbaRao.save()
 #subbaRao.savePose('walk_right')
-#subbaRao.saveAction('standing_to_walk_right', 1, 17)
+subbaRao.saveAction('walk_left_to_standing', 1, 13)
