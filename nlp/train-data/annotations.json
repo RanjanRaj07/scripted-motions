@@ -9,11 +9,12 @@
         "START_POSE",
         "END_POSE",
         "BOADY_PART",
-        "ADVERB"
+        "ADVERB",
+        "DESTINATION"
     ],
     "annotations": [
         [
-            "Raj walks 5 steps and turns 60 deg clockwise.\r",
+            "Raj walks 5steps and turns 60deg clockwise.\r",
             {
                 "entities": [
                     [
@@ -28,29 +29,29 @@
                     ],
                     [
                         10,
-                        17,
+                        16,
                         "ITERATION"
                     ],
                     [
-                        22,
-                        27,
+                        21,
+                        26,
                         "ACTION"
                     ],
                     [
-                        28,
-                        34,
+                        27,
+                        32,
                         "ANGLE"
                     ],
                     [
-                        35,
-                        44,
+                        33,
+                        42,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Sneha runs for 5 secs and sneaks 3 steps forward.\r",
+            "Sneha runs for 5secs and sneaks 3steps forward.\r",
             {
                 "entities": [
                     [
@@ -65,22 +66,22 @@
                     ],
                     [
                         15,
-                        21,
+                        20,
                         "DURATION"
                     ],
                     [
-                        26,
-                        32,
+                        25,
+                        31,
                         "ACTION"
                     ],
                     [
-                        33,
-                        40,
+                        32,
+                        38,
                         "ITERATION"
                     ],
                     [
-                        41,
-                        48,
+                        39,
+                        46,
                         "DIRECTION"
                     ]
                 ]
@@ -103,7 +104,7 @@
                     [
                         15,
                         20,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }
@@ -125,7 +126,7 @@
                     [
                         17,
                         21,
-                        "CHARACTER"
+                        "DESTINATION"
                     ],
                     [
                         26,
@@ -146,12 +147,12 @@
                     ],
                     [
                         15,
-                        25,
+                        20,
                         "END_POSE"
                     ],
                     [
                         31,
-                        44,
+                        39,
                         "START_POSE"
                     ],
                     [
@@ -163,7 +164,7 @@
             }
         ],
         [
-            "Shalini runs for 10 secs and turns around.\r",
+            "Shalini runs for 10secs and turns around.\r",
             {
                 "entities": [
                     [
@@ -178,24 +179,24 @@
                     ],
                     [
                         17,
-                        24,
+                        23,
                         "DURATION"
                     ],
                     [
-                        29,
-                        34,
+                        28,
+                        33,
                         "ACTION"
                     ],
                     [
-                        35,
-                        41,
+                        34,
+                        40,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Raj walks 3 steps and turns 90 deg clockwise.\r",
+            "Raj walks 3steps and turns 90deg clockwise.\r",
             {
                 "entities": [
                     [
@@ -210,29 +211,29 @@
                     ],
                     [
                         10,
-                        17,
+                        16,
                         "ITERATION"
                     ],
                     [
-                        22,
-                        27,
+                        21,
+                        26,
                         "ACTION"
                     ],
                     [
-                        28,
-                        34,
+                        27,
+                        32,
                         "ANGLE"
                     ],
                     [
-                        35,
-                        44,
+                        33,
+                        42,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Sneha runs for 8 secs and sneaks 2 steps forward.\r",
+            "Sneha runs for 8secs and sneaks 2steps forward.\r",
             {
                 "entities": [
                     [
@@ -247,22 +248,22 @@
                     ],
                     [
                         15,
-                        21,
+                        20,
                         "DURATION"
                     ],
                     [
-                        26,
-                        32,
+                        25,
+                        31,
                         "ACTION"
                     ],
                     [
-                        33,
-                        40,
+                        32,
+                        38,
                         "ITERATION"
                     ],
                     [
-                        41,
-                        48,
+                        39,
+                        46,
                         "DIRECTION"
                     ]
                 ]
@@ -285,7 +286,7 @@
                     [
                         15,
                         20,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }
@@ -307,7 +308,7 @@
                     [
                         17,
                         22,
-                        "CHARACTER"
+                        "DESTINATION"
                     ],
                     [
                         27,
@@ -318,7 +319,7 @@
             }
         ],
         [
-            "Haria comes to shock pose from sitting pose in 2 secs.\r",
+            "Haria comes to shock pose from sitting pose in 2secs.\r",
             {
                 "entities": [
                     [
@@ -328,24 +329,24 @@
                     ],
                     [
                         15,
-                        25,
+                        20,
                         "END_POSE"
                     ],
                     [
                         31,
-                        43,
+                        38,
                         "START_POSE"
                     ],
                     [
                         47,
-                        53,
+                        52,
                         "DURATION"
                     ]
                 ]
             }
         ],
         [
-            "Shalini runs for 15 secs and turns around twice.\r",
+            "Shalini runs for 15secs and turns around twice.\r",
             {
                 "entities": [
                     [
@@ -360,29 +361,29 @@
                     ],
                     [
                         17,
-                        24,
+                        23,
                         "DURATION"
                     ],
                     [
-                        29,
-                        34,
+                        28,
+                        33,
                         "ACTION"
                     ],
                     [
-                        35,
-                        41,
+                        34,
+                        40,
                         "DIRECTION"
                     ],
                     [
-                        42,
-                        47,
+                        41,
+                        46,
                         "ITERATION"
                     ]
                 ]
             }
         ],
         [
-            "Raj walks 4 steps and turns 45 deg clockwise.\r",
+            "Raj walks 4steps and turns 45deg clockwise.\r",
             {
                 "entities": [
                     [
@@ -397,29 +398,29 @@
                     ],
                     [
                         10,
-                        17,
+                        16,
                         "ITERATION"
                     ],
                     [
-                        22,
-                        27,
+                        21,
+                        26,
                         "ACTION"
                     ],
                     [
-                        28,
-                        34,
+                        27,
+                        32,
                         "ANGLE"
                     ],
                     [
-                        35,
-                        44,
+                        33,
+                        42,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Sneha runs for 6 secs and sneaks 4 steps forward.\r",
+            "Sneha runs for 6secs and sneaks 4steps forward.\r",
             {
                 "entities": [
                     [
@@ -434,22 +435,22 @@
                     ],
                     [
                         15,
-                        21,
+                        20,
                         "DURATION"
                     ],
                     [
-                        26,
-                        32,
+                        25,
+                        31,
                         "ACTION"
                     ],
                     [
-                        33,
-                        40,
+                        32,
+                        38,
                         "ITERATION"
                     ],
                     [
-                        41,
-                        48,
+                        39,
+                        46,
                         "DIRECTION"
                     ]
                 ]
@@ -472,7 +473,7 @@
                     [
                         15,
                         19,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }
@@ -494,7 +495,7 @@
                     [
                         17,
                         20,
-                        "CHARACTER"
+                        "DESTINATION"
                     ],
                     [
                         25,
@@ -505,7 +506,7 @@
             }
         ],
         [
-            "Haria comes to shock pose from lying pose in 3 secs.\r",
+            "Haria comes to shock pose from lying pose in 3secs.\r",
             {
                 "entities": [
                     [
@@ -515,24 +516,24 @@
                     ],
                     [
                         15,
-                        25,
+                        20,
                         "END_POSE"
                     ],
                     [
                         31,
-                        41,
+                        36,
                         "START_POSE"
                     ],
                     [
                         45,
-                        51,
+                        50,
                         "DURATION"
                     ]
                 ]
             }
         ],
         [
-            "Shalini runs for 12 secs and turns around thrice.\r",
+            "Shalini runs for 12secs and turns around thrice.\r",
             {
                 "entities": [
                     [
@@ -547,29 +548,29 @@
                     ],
                     [
                         17,
-                        24,
+                        23,
                         "DURATION"
                     ],
                     [
-                        29,
-                        34,
+                        28,
+                        33,
                         "ACTION"
                     ],
                     [
-                        35,
-                        41,
+                        34,
+                        40,
                         "DIRECTION"
                     ],
                     [
-                        42,
-                        48,
+                        41,
+                        47,
                         "ITERATION"
                     ]
                 ]
             }
         ],
         [
-            "Raj walks 6 steps and turns 30 deg clockwise.\r",
+            "Raj walks 6steps and turns 30deg clockwise.\r",
             {
                 "entities": [
                     [
@@ -584,29 +585,29 @@
                     ],
                     [
                         10,
-                        17,
+                        16,
                         "ITERATION"
                     ],
                     [
-                        22,
-                        27,
+                        21,
+                        26,
                         "ACTION"
                     ],
                     [
-                        28,
-                        34,
+                        27,
+                        32,
                         "ANGLE"
                     ],
                     [
-                        35,
-                        44,
+                        33,
+                        42,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Sneha runs for 7 secs and sneaks 3 steps forward.\r",
+            "Sneha runs for 7secs and sneaks 3steps forward.\r",
             {
                 "entities": [
                     [
@@ -621,22 +622,22 @@
                     ],
                     [
                         15,
-                        21,
+                        20,
                         "DURATION"
                     ],
                     [
-                        26,
-                        32,
+                        25,
+                        31,
                         "ACTION"
                     ],
                     [
-                        33,
-                        40,
+                        32,
+                        38,
                         "ITERATION"
                     ],
                     [
-                        41,
-                        48,
+                        39,
+                        46,
                         "DIRECTION"
                     ]
                 ]
@@ -659,7 +660,7 @@
                     [
                         15,
                         20,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }
@@ -681,7 +682,7 @@
                     [
                         17,
                         22,
-                        "CHARACTER"
+                        "DESTINATION"
                     ],
                     [
                         27,
@@ -697,7 +698,7 @@
             }
         ],
         [
-            "Haria comes to shock pose from crouching pose in 2 secs.\r",
+            "Haria comes to shock pose from crouching pose in 2secs.\r",
             {
                 "entities": [
                     [
@@ -707,24 +708,24 @@
                     ],
                     [
                         15,
-                        25,
+                        20,
                         "END_POSE"
                     ],
                     [
                         31,
-                        45,
+                        40,
                         "START_POSE"
                     ],
                     [
                         49,
-                        55,
+                        54,
                         "DURATION"
                     ]
                 ]
             }
         ],
         [
-            "Shalini runs for 14 secs and turns around twice.\r",
+            "Shalini runs for 14secs and turns around twice.\r",
             {
                 "entities": [
                     [
@@ -739,29 +740,29 @@
                     ],
                     [
                         17,
-                        24,
+                        23,
                         "DURATION"
                     ],
                     [
-                        29,
-                        34,
+                        28,
+                        33,
                         "ACTION"
                     ],
                     [
-                        35,
-                        41,
+                        34,
+                        40,
                         "DIRECTION"
                     ],
                     [
-                        42,
-                        47,
+                        41,
+                        46,
                         "ITERATION"
                     ]
                 ]
             }
         ],
         [
-            "Raj walks 5 steps and turns 60 deg clockwise.\r",
+            "Raj walks 5steps and turns 60deg clockwise.\r",
             {
                 "entities": [
                     [
@@ -776,29 +777,29 @@
                     ],
                     [
                         10,
-                        17,
+                        16,
                         "ITERATION"
                     ],
                     [
-                        22,
-                        27,
+                        21,
+                        26,
                         "ACTION"
                     ],
                     [
-                        28,
-                        34,
+                        27,
+                        32,
                         "ANGLE"
                     ],
                     [
-                        35,
-                        44,
+                        33,
+                        42,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Sneha runs for 5 secs and sneaks 3 steps forward.\r",
+            "Sneha runs for 5secs and sneaks 3steps forward.\r",
             {
                 "entities": [
                     [
@@ -813,22 +814,22 @@
                     ],
                     [
                         15,
-                        21,
+                        20,
                         "DURATION"
                     ],
                     [
-                        26,
-                        32,
+                        25,
+                        31,
                         "ACTION"
                     ],
                     [
-                        33,
-                        40,
+                        32,
+                        38,
                         "ITERATION"
                     ],
                     [
-                        41,
-                        48,
+                        39,
+                        46,
                         "DIRECTION"
                     ]
                 ]
@@ -851,7 +852,7 @@
                     [
                         15,
                         20,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }
@@ -873,7 +874,7 @@
                     [
                         17,
                         21,
-                        "CHARACTER"
+                        "DESTINATION"
                     ],
                     [
                         26,
@@ -889,7 +890,7 @@
             }
         ],
         [
-            "Haria comes to shock pose from standing pose in 1 sec.\r",
+            "Haria comes to shock pose from standing pose in 1sec.\r",
             {
                 "entities": [
                     [
@@ -899,24 +900,24 @@
                     ],
                     [
                         15,
-                        25,
+                        20,
                         "END_POSE"
                     ],
                     [
                         31,
-                        44,
+                        39,
                         "START_POSE"
                     ],
                     [
                         48,
-                        53,
+                        52,
                         "DURATION"
                     ]
                 ]
             }
         ],
         [
-            "Shalini runs for 10 secs and turns around.\r",
+            "Shalini runs for 10secs and turns around.\r",
             {
                 "entities": [
                     [
@@ -931,24 +932,24 @@
                     ],
                     [
                         17,
-                        24,
+                        23,
                         "DURATION"
                     ],
                     [
-                        29,
-                        34,
+                        28,
+                        33,
                         "ACTION"
                     ],
                     [
-                        35,
-                        41,
+                        34,
+                        40,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Raj walks 4 steps and turns 75 deg clockwise.\r",
+            "Raj walks 4steps and turns 75deg clockwise.\r",
             {
                 "entities": [
                     [
@@ -963,29 +964,29 @@
                     ],
                     [
                         10,
-                        17,
+                        16,
                         "ITERATION"
                     ],
                     [
-                        22,
-                        27,
+                        21,
+                        26,
                         "ACTION"
                     ],
                     [
-                        28,
-                        34,
+                        27,
+                        32,
                         "ANGLE"
                     ],
                     [
-                        35,
-                        44,
+                        33,
+                        42,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Sneha runs for 9 secs and sneaks 2 steps forward.\r",
+            "Sneha runs for 9secs and sneaks 2steps forward.\r",
             {
                 "entities": [
                     [
@@ -1000,22 +1001,22 @@
                     ],
                     [
                         15,
-                        21,
+                        20,
                         "DURATION"
                     ],
                     [
-                        26,
-                        32,
+                        25,
+                        31,
                         "ACTION"
                     ],
                     [
-                        33,
-                        40,
+                        32,
+                        38,
                         "ITERATION"
                     ],
                     [
-                        41,
-                        48,
+                        39,
+                        46,
                         "DIRECTION"
                     ]
                 ]
@@ -1038,7 +1039,7 @@
                     [
                         15,
                         21,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }
@@ -1060,7 +1061,7 @@
                     [
                         17,
                         22,
-                        "CHARACTER"
+                        "DESTINATION"
                     ],
                     [
                         27,
@@ -1071,7 +1072,7 @@
             }
         ],
         [
-            "Haria comes to shock pose from sitting pose in 2 secs.\r",
+            "Haria comes to shock pose from sitting pose in 2secs.\r",
             {
                 "entities": [
                     [
@@ -1081,24 +1082,24 @@
                     ],
                     [
                         15,
-                        25,
+                        20,
                         "END_POSE"
                     ],
                     [
                         31,
-                        43,
+                        38,
                         "START_POSE"
                     ],
                     [
                         47,
-                        53,
+                        52,
                         "DURATION"
                     ]
                 ]
             }
         ],
         [
-            "Shalini runs for 13 secs and turns around thrice.\r",
+            "Shalini runs for 13secs and turns around thrice.\r",
             {
                 "entities": [
                     [
@@ -1113,29 +1114,29 @@
                     ],
                     [
                         17,
-                        24,
+                        23,
                         "DURATION"
                     ],
                     [
-                        29,
-                        34,
+                        28,
+                        33,
                         "ACTION"
                     ],
                     [
-                        35,
-                        41,
+                        34,
+                        40,
                         "DIRECTION"
                     ],
                     [
-                        42,
-                        48,
+                        41,
+                        47,
                         "ITERATION"
                     ]
                 ]
             }
         ],
         [
-            "Raj walks 7 steps and turns 45 deg clockwise.\r",
+            "Raj walks 7steps and turns 45deg clockwise.\r",
             {
                 "entities": [
                     [
@@ -1150,29 +1151,29 @@
                     ],
                     [
                         10,
-                        17,
+                        16,
                         "ITERATION"
                     ],
                     [
-                        22,
-                        27,
+                        21,
+                        26,
                         "ACTION"
                     ],
                     [
-                        28,
-                        34,
+                        27,
+                        32,
                         "ANGLE"
                     ],
                     [
-                        35,
-                        44,
+                        33,
+                        42,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Sneha runs for 6 secs and sneaks 4 steps forward.\r",
+            "Sneha runs for 6secs and sneaks 4steps forward.\r",
             {
                 "entities": [
                     [
@@ -1187,22 +1188,22 @@
                     ],
                     [
                         15,
-                        21,
+                        20,
                         "DURATION"
                     ],
                     [
-                        26,
-                        32,
+                        25,
+                        31,
                         "ACTION"
                     ],
                     [
-                        33,
-                        40,
+                        32,
+                        38,
                         "ITERATION"
                     ],
                     [
-                        41,
-                        48,
+                        39,
+                        46,
                         "DIRECTION"
                     ]
                 ]
@@ -1225,7 +1226,7 @@
                     [
                         15,
                         21,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }
@@ -1247,7 +1248,7 @@
                     [
                         17,
                         22,
-                        "CHARACTER"
+                        "DESTINATION"
                     ],
                     [
                         27,
@@ -1258,7 +1259,7 @@
             }
         ],
         [
-            "Haria comes to shock pose from lying pose in 3 secs.\r",
+            "Haria comes to shock pose from lying pose in 3secs.\r",
             {
                 "entities": [
                     [
@@ -1268,24 +1269,24 @@
                     ],
                     [
                         15,
-                        25,
+                        20,
                         "END_POSE"
                     ],
                     [
                         31,
-                        41,
+                        36,
                         "START_POSE"
                     ],
                     [
                         45,
-                        51,
+                        50,
                         "DURATION"
                     ]
                 ]
             }
         ],
         [
-            "Shalini runs for 11 secs and turns around twice.\r",
+            "Shalini runs for 11secs and turns around twice.\r",
             {
                 "entities": [
                     [
@@ -1300,29 +1301,29 @@
                     ],
                     [
                         17,
-                        24,
+                        23,
                         "DURATION"
                     ],
                     [
-                        29,
-                        34,
+                        28,
+                        33,
                         "ACTION"
                     ],
                     [
-                        35,
-                        41,
+                        34,
+                        40,
                         "DIRECTION"
                     ],
                     [
-                        42,
-                        47,
+                        41,
+                        46,
                         "ITERATION"
                     ]
                 ]
             }
         ],
         [
-            "Raj walks 6 steps and turns 30 deg clockwise.\r",
+            "Raj walks 6steps and turns 30deg clockwise.\r",
             {
                 "entities": [
                     [
@@ -1337,29 +1338,29 @@
                     ],
                     [
                         10,
-                        17,
+                        16,
                         "ITERATION"
                     ],
                     [
-                        22,
-                        27,
+                        21,
+                        26,
                         "ACTION"
                     ],
                     [
-                        28,
-                        34,
+                        27,
+                        32,
                         "ANGLE"
                     ],
                     [
-                        35,
-                        44,
+                        33,
+                        42,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Sneha runs for 8 secs and sneaks 3 steps forward.\r",
+            "Sneha runs for 8secs and sneaks 3steps forward.\r",
             {
                 "entities": [
                     [
@@ -1374,22 +1375,22 @@
                     ],
                     [
                         15,
-                        21,
+                        20,
                         "DURATION"
                     ],
                     [
-                        26,
-                        32,
+                        25,
+                        31,
                         "ACTION"
                     ],
                     [
-                        33,
-                        40,
+                        32,
+                        38,
                         "ITERATION"
                     ],
                     [
-                        41,
-                        48,
+                        39,
+                        46,
                         "DIRECTION"
                     ]
                 ]
@@ -1412,7 +1413,7 @@
                     [
                         15,
                         20,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }
@@ -1434,7 +1435,7 @@
                     [
                         17,
                         22,
-                        "CHARACTER"
+                        "DESTINATION"
                     ],
                     [
                         27,
@@ -1445,7 +1446,7 @@
             }
         ],
         [
-            "Haria comes to shock pose from crouching pose in 2 secs.\r",
+            "Haria comes to shock pose from crouching pose in 2secs.\r",
             {
                 "entities": [
                     [
@@ -1455,24 +1456,24 @@
                     ],
                     [
                         15,
-                        25,
+                        20,
                         "END_POSE"
                     ],
                     [
                         31,
-                        45,
+                        40,
                         "START_POSE"
                     ],
                     [
                         49,
-                        55,
+                        54,
                         "DURATION"
                     ]
                 ]
             }
         ],
         [
-            "Shalini runs for 12 secs and turns around twice.\r",
+            "Shalini runs for 12secs and turns around twice.\r",
             {
                 "entities": [
                     [
@@ -1487,29 +1488,29 @@
                     ],
                     [
                         17,
-                        24,
+                        23,
                         "DURATION"
                     ],
                     [
-                        29,
-                        34,
+                        28,
+                        33,
                         "ACTION"
                     ],
                     [
-                        35,
-                        41,
+                        34,
+                        40,
                         "DIRECTION"
                     ],
                     [
-                        42,
-                        47,
+                        41,
+                        46,
                         "ITERATION"
                     ]
                 ]
             }
         ],
         [
-            "Raj walks 5 steps and turns 60 deg clockwise.\r",
+            "Raj walks 5steps and turns 60deg clockwise.\r",
             {
                 "entities": [
                     [
@@ -1524,29 +1525,29 @@
                     ],
                     [
                         10,
-                        17,
+                        16,
                         "ITERATION"
                     ],
                     [
-                        22,
-                        27,
+                        21,
+                        26,
                         "ACTION"
                     ],
                     [
-                        28,
-                        34,
+                        27,
+                        32,
                         "ANGLE"
                     ],
                     [
-                        35,
-                        44,
+                        33,
+                        42,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Sneha runs for 5 secs and sneaks 3 steps forward.\r",
+            "Sneha runs for 5secs and sneaks 3steps forward.\r",
             {
                 "entities": [
                     [
@@ -1561,22 +1562,22 @@
                     ],
                     [
                         15,
-                        21,
+                        20,
                         "DURATION"
                     ],
                     [
-                        26,
-                        32,
+                        25,
+                        31,
                         "ACTION"
                     ],
                     [
-                        33,
-                        40,
+                        32,
+                        38,
                         "ITERATION"
                     ],
                     [
-                        41,
-                        48,
+                        39,
+                        46,
                         "DIRECTION"
                     ]
                 ]
@@ -1599,7 +1600,7 @@
                     [
                         15,
                         20,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }
@@ -1621,7 +1622,7 @@
                     [
                         17,
                         22,
-                        "CHARACTER"
+                        "DESTINATION"
                     ],
                     [
                         27,
@@ -1632,7 +1633,7 @@
             }
         ],
         [
-            "Haria comes to shock pose from standing pose in 1 sec.\r",
+            "Haria comes to shock pose from standing pose in 1sec.\r",
             {
                 "entities": [
                     [
@@ -1642,24 +1643,24 @@
                     ],
                     [
                         15,
-                        25,
+                        20,
                         "END_POSE"
                     ],
                     [
                         31,
-                        44,
+                        39,
                         "START_POSE"
                     ],
                     [
                         48,
-                        53,
+                        52,
                         "DURATION"
                     ]
                 ]
             }
         ],
         [
-            "Shalini runs for 10 secs and turns around.\r",
+            "Shalini runs for 10secs and turns around.\r",
             {
                 "entities": [
                     [
@@ -1674,24 +1675,24 @@
                     ],
                     [
                         17,
-                        24,
+                        23,
                         "DURATION"
                     ],
                     [
-                        29,
-                        34,
+                        28,
+                        33,
                         "ACTION"
                     ],
                     [
-                        35,
-                        41,
+                        34,
+                        40,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Raj walks 4 steps and turns 75 deg clockwise.\r",
+            "Raj walks 4steps and turns 75deg clockwise.\r",
             {
                 "entities": [
                     [
@@ -1706,29 +1707,29 @@
                     ],
                     [
                         10,
-                        17,
+                        16,
                         "ITERATION"
                     ],
                     [
-                        22,
-                        27,
+                        21,
+                        26,
                         "ACTION"
                     ],
                     [
-                        28,
-                        34,
+                        27,
+                        32,
                         "ANGLE"
                     ],
                     [
-                        35,
-                        44,
+                        33,
+                        42,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Sneha runs for 9 secs and sneaks 2 steps forward.\r",
+            "Sneha runs for 9secs and sneaks 2steps forward.\r",
             {
                 "entities": [
                     [
@@ -1743,22 +1744,22 @@
                     ],
                     [
                         15,
-                        21,
+                        20,
                         "DURATION"
                     ],
                     [
-                        26,
-                        32,
+                        25,
+                        31,
                         "ACTION"
                     ],
                     [
-                        33,
-                        40,
+                        32,
+                        38,
                         "ITERATION"
                     ],
                     [
-                        41,
-                        48,
+                        39,
+                        46,
                         "DIRECTION"
                     ]
                 ]
@@ -1791,7 +1792,7 @@
                     [
                         31,
                         36,
-                        "BOADY_PART"
+                        "BODY_PART"
                     ]
                 ]
             }
@@ -1812,7 +1813,7 @@
                     ],
                     [
                         11,
-                        22,
+                        16,
                         "ITERATION"
                     ],
                     [
@@ -1834,8 +1835,13 @@
                     ],
                     [
                         6,
-                        14,
+                        11,
                         "ACTION"
+                    ],
+                    [
+                        12,
+                        14,
+                        "DIRECTION"
                     ],
                     [
                         31,
@@ -1880,15 +1886,15 @@
                         "ACTION"
                     ],
                     [
-                        47,
+                        51,
                         55,
-                        "BOADY_PART"
+                        "BODY_PART"
                     ]
                 ]
             }
         ],
         [
-            "Rahul lunges forward and then spins 90 degrees counterclockwise.\r",
+            "Rahul lunges forward and then spins 90degrees counterclockwise.\r",
             {
                 "entities": [
                     [
@@ -1913,12 +1919,12 @@
                     ],
                     [
                         36,
-                        46,
+                        45,
                         "ANGLE"
                     ],
                     [
-                        47,
-                        63,
+                        46,
+                        62,
                         "DIRECTION"
                     ]
                 ]
@@ -2005,7 +2011,7 @@
                     [
                         17,
                         21,
-                        "BOADY_PART"
+                        "BODY_PART"
                     ],
                     [
                         22,
@@ -2046,7 +2052,7 @@
                     ],
                     [
                         21,
-                        31,
+                        24,
                         "ITERATION"
                     ],
                     [
@@ -2131,9 +2137,9 @@
                         "ACTION"
                     ],
                     [
-                        15,
+                        19,
                         23,
-                        "BOADY_PART"
+                        "BODY_PART"
                     ],
                     [
                         33,
@@ -2148,7 +2154,7 @@
                     [
                         55,
                         59,
-                        "BOADY_PART"
+                        "BODY_PART"
                     ]
                 ]
             }
@@ -2168,7 +2174,7 @@
                         "ACTION"
                     ],
                     [
-                        13,
+                        18,
                         24,
                         "ADVERB"
                     ],
@@ -2193,11 +2199,6 @@
                         0,
                         6,
                         "CHARACTER"
-                    ],
-                    [
-                        15,
-                        19,
-                        "ADVERB"
                     ],
                     [
                         20,
@@ -2234,7 +2235,7 @@
                     [
                         17,
                         21,
-                        "BOADY_PART"
+                        "BODY_PART"
                     ],
                     [
                         22,
@@ -2355,7 +2356,12 @@
                     [
                         49,
                         54,
-                        "BOADY_PART"
+                        "BODY_PART"
+                    ],
+                    [
+                        55,
+                        63,
+                        "ADVERB"
                     ]
                 ]
             }
@@ -2377,7 +2383,7 @@
                     [
                         12,
                         20,
-                        "DIRECTION"
+                        "ADVERB"
                     ],
                     [
                         28,
@@ -2467,6 +2473,11 @@
                     ],
                     [
                         15,
+                        19,
+                        "ADVERB"
+                    ],
+                    [
+                        20,
                         26,
                         "ACTION"
                     ],
@@ -2479,11 +2490,6 @@
                         43,
                         49,
                         "DIRECTION"
-                    ],
-                    [
-                        50,
-                        60,
-                        "ADVERB"
                     ]
                 ]
             }
@@ -2562,7 +2568,7 @@
                     [
                         59,
                         63,
-                        "BOADY_PART"
+                        "BODY_PART"
                     ]
                 ]
             }
@@ -2609,9 +2615,9 @@
                         "ACTION"
                     ],
                     [
-                        15,
+                        19,
                         23,
-                        "BOADY_PART"
+                        "BODY_PART"
                     ],
                     [
                         31,
@@ -2622,11 +2628,6 @@
                         40,
                         46,
                         "DIRECTION"
-                    ],
-                    [
-                        47,
-                        57,
-                        "ADVERB"
                     ]
                 ]
             }
@@ -2733,18 +2734,23 @@
                     ],
                     [
                         17,
+                        21,
+                        "ADVERB"
+                    ],
+                    [
+                        22,
                         28,
                         "ACTION"
                     ],
                     [
                         38,
                         43,
-                        "ACTION"
+                        "ADVERB"
                     ],
                     [
                         44,
                         49,
-                        "DIRECTION"
+                        "ACTION"
                     ]
                 ]
             }
@@ -2806,9 +2812,9 @@
                         "ACTION"
                     ],
                     [
-                        15,
+                        19,
                         23,
-                        "BOADY_PART"
+                        "BODY_PART"
                     ],
                     [
                         33,
@@ -2925,6 +2931,11 @@
                     ],
                     [
                         16,
+                        20,
+                        "ADVERB"
+                    ],
+                    [
+                        21,
                         27,
                         "ACTION"
                     ],
@@ -2998,9 +3009,9 @@
                         "ACTION"
                     ],
                     [
-                        14,
+                        18,
                         22,
-                        "BOADY_PART"
+                        "BODY_PART"
                     ],
                     [
                         32,
@@ -3117,6 +3128,11 @@
                     ],
                     [
                         13,
+                        17,
+                        "ADVERB"
+                    ],
+                    [
+                        18,
                         24,
                         "ACTION"
                     ],
@@ -3190,9 +3206,9 @@
                         "ACTION"
                     ],
                     [
-                        12,
+                        16,
                         20,
-                        "BOADY_PART"
+                        "BODY_PART"
                     ],
                     [
                         30,
@@ -3240,7 +3256,7 @@
             }
         ],
         [
-            "Vivek walks 4 steps and turns 90 deg clockwise.",
+            "Vivek walks 4steps and turns 90deg clockwise.",
             {
                 "entities": [
                     [
@@ -3255,29 +3271,29 @@
                     ],
                     [
                         12,
-                        19,
+                        18,
                         "ITERATION"
                     ],
                     [
-                        24,
-                        29,
+                        23,
+                        28,
                         "ACTION"
                     ],
                     [
-                        30,
-                        36,
+                        29,
+                        34,
                         "ANGLE"
                     ],
                     [
-                        37,
-                        46,
+                        35,
+                        44,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Isha runs for 8 secs and sneaks 2 steps forward.\r",
+            "Isha runs for 8secs and sneaks 2steps forward.\r",
             {
                 "entities": [
                     [
@@ -3292,22 +3308,22 @@
                     ],
                     [
                         14,
-                        20,
+                        19,
                         "DURATION"
                     ],
                     [
-                        25,
-                        31,
+                        24,
+                        30,
                         "ACTION"
                     ],
                     [
-                        32,
-                        39,
+                        31,
+                        37,
                         "ITERATION"
                     ],
                     [
-                        40,
-                        47,
+                        38,
+                        45,
                         "DIRECTION"
                     ]
                 ]
@@ -3330,7 +3346,7 @@
                     [
                         16,
                         20,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }
@@ -3352,7 +3368,7 @@
                     [
                         14,
                         19,
-                        "CHARACTER"
+                        "DESTINATION"
                     ],
                     [
                         24,
@@ -3363,7 +3379,7 @@
             }
         ],
         [
-            "Sakshi comes to shock pose from sitting pose in 2 secs.\r",
+            "Sakshi comes to shock pose from sitting pose in 2secs.\r",
             {
                 "entities": [
                     [
@@ -3373,24 +3389,24 @@
                     ],
                     [
                         16,
-                        26,
+                        21,
                         "END_POSE"
                     ],
                     [
                         32,
-                        44,
+                        39,
                         "START_POSE"
                     ],
                     [
                         48,
-                        54,
+                        53,
                         "DURATION"
                     ]
                 ]
             }
         ],
         [
-            "Rohan runs for 15 secs and turns around twice.\r",
+            "Rohan runs for 15secs and turns around twice.\r",
             {
                 "entities": [
                     [
@@ -3405,29 +3421,29 @@
                     ],
                     [
                         15,
-                        22,
+                        21,
                         "DURATION"
                     ],
                     [
-                        27,
-                        32,
+                        26,
+                        31,
                         "ACTION"
                     ],
                     [
-                        33,
-                        39,
+                        32,
+                        38,
                         "DIRECTION"
                     ],
                     [
-                        40,
-                        45,
+                        39,
+                        44,
                         "ITERATION"
                     ]
                 ]
             }
         ],
         [
-            "Vikram walks 3 steps and turns 45 deg clockwise.\r",
+            "Vikram walks 3steps and turns 45deg clockwise.\r",
             {
                 "entities": [
                     [
@@ -3442,29 +3458,29 @@
                     ],
                     [
                         13,
-                        20,
+                        19,
                         "ITERATION"
                     ],
                     [
-                        25,
-                        30,
+                        24,
+                        29,
                         "ACTION"
                     ],
                     [
-                        31,
-                        37,
+                        30,
+                        35,
                         "ANGLE"
                     ],
                     [
-                        38,
-                        47,
+                        36,
+                        45,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Ria runs for 6 secs and sneaks 4 steps forward.\r",
+            "Ria runs for 6secs and sneaks 4steps forward.\r",
             {
                 "entities": [
                     [
@@ -3479,22 +3495,22 @@
                     ],
                     [
                         13,
-                        19,
+                        18,
                         "DURATION"
                     ],
                     [
-                        24,
-                        30,
+                        23,
+                        29,
                         "ACTION"
                     ],
                     [
-                        31,
-                        38,
+                        30,
+                        36,
                         "ITERATION"
                     ],
                     [
-                        39,
-                        46,
+                        37,
+                        44,
                         "DIRECTION"
                     ]
                 ]
@@ -3517,7 +3533,7 @@
                     [
                         16,
                         22,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }
@@ -3539,7 +3555,7 @@
                     [
                         15,
                         21,
-                        "CHARACTER"
+                        "DESTINATION"
                     ],
                     [
                         26,
@@ -3550,7 +3566,7 @@
             }
         ],
         [
-            "Aarav comes to shock pose from lying pose in 3 secs.\r",
+            "Aarav comes to shock pose from lying pose in 3secs.\r",
             {
                 "entities": [
                     [
@@ -3560,98 +3576,24 @@
                     ],
                     [
                         15,
-                        25,
-                        "END_POSE"
+                        20,
+                        "START_POSE"
                     ],
                     [
                         31,
-                        41,
+                        36,
                         "START_POSE"
                     ],
                     [
                         45,
-                        51,
+                        50,
                         "DURATION"
                     ]
                 ]
             }
         ],
         [
-            "Kriti runs for 12 secs and turns around thrice.\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        5,
-                        "CHARACTER"
-                    ],
-                    [
-                        6,
-                        10,
-                        "ACTION"
-                    ],
-                    [
-                        15,
-                        22,
-                        "DURATION"
-                    ],
-                    [
-                        27,
-                        32,
-                        "ACTION"
-                    ],
-                    [
-                        33,
-                        39,
-                        "DIRECTION"
-                    ],
-                    [
-                        40,
-                        46,
-                        "ITERATION"
-                    ]
-                ]
-            }
-        ],
-        [
-            "Kunal walks 6 steps and turns 30 deg clockwise.\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        5,
-                        "CHARACTER"
-                    ],
-                    [
-                        6,
-                        11,
-                        "ACTION"
-                    ],
-                    [
-                        12,
-                        19,
-                        "ITERATION"
-                    ],
-                    [
-                        24,
-                        29,
-                        "ACTION"
-                    ],
-                    [
-                        30,
-                        36,
-                        "ANGLE"
-                    ],
-                    [
-                        37,
-                        46,
-                        "DIRECTION"
-                    ]
-                ]
-            }
-        ],
-        [
-            "Sanya runs for 7 secs and sneaks 3 steps forward.\r",
+            "Kriti runs for 12secs and turns around thrice.\r",
             {
                 "entities": [
                     [
@@ -3671,17 +3613,91 @@
                     ],
                     [
                         26,
-                        32,
+                        31,
                         "ACTION"
                     ],
                     [
-                        33,
-                        40,
+                        32,
+                        38,
+                        "DIRECTION"
+                    ],
+                    [
+                        39,
+                        45,
+                        "ITERATION"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Kunal walks 6steps and turns 30deg clockwise.\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        5,
+                        "CHARACTER"
+                    ],
+                    [
+                        6,
+                        11,
+                        "ACTION"
+                    ],
+                    [
+                        12,
+                        18,
                         "ITERATION"
                     ],
                     [
-                        41,
-                        48,
+                        23,
+                        28,
+                        "ACTION"
+                    ],
+                    [
+                        29,
+                        34,
+                        "ANGLE"
+                    ],
+                    [
+                        35,
+                        44,
+                        "DIRECTION"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Sanya runs for 7secs and sneaks 3steps forward.\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        5,
+                        "CHARACTER"
+                    ],
+                    [
+                        6,
+                        10,
+                        "ACTION"
+                    ],
+                    [
+                        15,
+                        20,
+                        "DURATION"
+                    ],
+                    [
+                        25,
+                        31,
+                        "ACTION"
+                    ],
+                    [
+                        32,
+                        38,
+                        "ITERATION"
+                    ],
+                    [
+                        39,
+                        46,
                         "DIRECTION"
                     ]
                 ]
@@ -3704,7 +3720,7 @@
                     [
                         16,
                         22,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }
@@ -3726,7 +3742,7 @@
                     [
                         15,
                         22,
-                        "CHARACTER"
+                        "DESTINATION"
                     ],
                     [
                         27,
@@ -3742,7 +3758,7 @@
             }
         ],
         [
-            "Aditya comes to shock pose from crouching pose in 2 secs.\r",
+            "Aditya comes to shock pose from crouching pose in 2secs.\r",
             {
                 "entities": [
                     [
@@ -3752,24 +3768,24 @@
                     ],
                     [
                         16,
-                        26,
+                        21,
                         "END_POSE"
                     ],
                     [
                         32,
-                        46,
+                        41,
                         "START_POSE"
                     ],
                     [
                         50,
-                        56,
+                        55,
                         "DURATION"
                     ]
                 ]
             }
         ],
         [
-            "Priya runs for 14 secs and turns around twice.\r",
+            "Priya runs for 14secs and turns around twice.\r",
             {
                 "entities": [
                     [
@@ -3784,29 +3800,29 @@
                     ],
                     [
                         15,
-                        22,
+                        21,
                         "DURATION"
                     ],
                     [
-                        27,
-                        32,
+                        26,
+                        31,
                         "ACTION"
                     ],
                     [
-                        33,
-                        39,
+                        32,
+                        38,
                         "DIRECTION"
                     ],
                     [
-                        40,
-                        45,
+                        39,
+                        44,
                         "ITERATION"
                     ]
                 ]
             }
         ],
         [
-            "Siddharth walks 5 steps and turns 60 deg clockwise.\r",
+            "Siddharth walks 5steps and turns 60deg clockwise.\r",
             {
                 "entities": [
                     [
@@ -3821,29 +3837,29 @@
                     ],
                     [
                         16,
-                        23,
+                        22,
                         "ITERATION"
                     ],
                     [
-                        28,
-                        33,
+                        27,
+                        32,
                         "ACTION"
                     ],
                     [
-                        34,
-                        40,
+                        33,
+                        38,
                         "ANGLE"
                     ],
                     [
-                        41,
-                        50,
+                        39,
+                        48,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Anjali runs for 5 secs and sneaks 3 steps forward.\r",
+            "Anjali runs for 5secs and sneaks 3steps forward.\r",
             {
                 "entities": [
                     [
@@ -3858,22 +3874,22 @@
                     ],
                     [
                         16,
-                        22,
+                        21,
                         "DURATION"
                     ],
                     [
-                        27,
-                        33,
+                        26,
+                        32,
                         "ACTION"
                     ],
                     [
-                        34,
-                        41,
+                        33,
+                        39,
                         "ITERATION"
                     ],
                     [
-                        42,
-                        49,
+                        40,
+                        47,
                         "DIRECTION"
                     ]
                 ]
@@ -3896,7 +3912,7 @@
                     [
                         16,
                         20,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }
@@ -3918,7 +3934,7 @@
                     [
                         16,
                         21,
-                        "CHARACTER"
+                        "DESTINATION"
                     ],
                     [
                         26,
@@ -3944,24 +3960,19 @@
                     ],
                     [
                         15,
-                        25,
+                        20,
                         "END_POSE"
                     ],
                     [
                         31,
-                        44,
+                        39,
                         "START_POSE"
-                    ],
-                    [
-                        48,
-                        53,
-                        "DURATION"
                     ]
                 ]
             }
         ],
         [
-            "Rahul runs for 10 secs and turns around.\r",
+            "Rahul runs for 10secs and turns around.\r",
             {
                 "entities": [
                     [
@@ -3976,24 +3987,24 @@
                     ],
                     [
                         15,
-                        22,
+                        21,
                         "DURATION"
                     ],
                     [
-                        27,
-                        32,
+                        26,
+                        31,
                         "ACTION"
                     ],
                     [
-                        33,
-                        39,
+                        32,
+                        38,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Yash walks 4 steps and turns 75 deg clockwise.\r",
+            "Yash walks 4steps and turns 75deg clockwise.\r",
             {
                 "entities": [
                     [
@@ -4008,29 +4019,29 @@
                     ],
                     [
                         11,
-                        18,
+                        17,
                         "ITERATION"
                     ],
                     [
-                        23,
-                        28,
+                        22,
+                        27,
                         "ACTION"
                     ],
                     [
-                        29,
-                        35,
+                        28,
+                        33,
                         "ANGLE"
                     ],
                     [
-                        36,
-                        45,
+                        34,
+                        43,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Radhika runs for 9 secs and sneaks 2 steps forward.\r",
+            "Radhika runs for 9secs and sneaks 2steps forward.\r",
             {
                 "entities": [
                     [
@@ -4045,22 +4056,22 @@
                     ],
                     [
                         17,
-                        23,
+                        22,
                         "DURATION"
                     ],
                     [
-                        28,
-                        34,
+                        27,
+                        33,
                         "ACTION"
                     ],
                     [
-                        35,
-                        42,
+                        34,
+                        40,
                         "ITERATION"
                     ],
                     [
-                        43,
-                        50,
+                        41,
+                        48,
                         "DIRECTION"
                     ]
                 ]
@@ -4083,7 +4094,7 @@
                     [
                         16,
                         21,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }
@@ -4105,7 +4116,7 @@
                     [
                         15,
                         20,
-                        "CHARACTER"
+                        "DESTINATION"
                     ],
                     [
                         25,
@@ -4116,7 +4127,7 @@
             }
         ],
         [
-            "Amit comes to shock pose from sitting pose in 2 secs.\r",
+            "Amit comes to shock pose from sitting pose in 2secs.\r",
             {
                 "entities": [
                     [
@@ -4126,98 +4137,24 @@
                     ],
                     [
                         14,
-                        24,
+                        19,
                         "END_POSE"
                     ],
                     [
                         30,
-                        42,
+                        37,
                         "START_POSE"
                     ],
                     [
                         46,
-                        52,
+                        51,
                         "DURATION"
                     ]
                 ]
             }
         ],
         [
-            "Ananya runs for 13 secs and turns around thrice.\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        6,
-                        "CHARACTER"
-                    ],
-                    [
-                        7,
-                        11,
-                        "ACTION"
-                    ],
-                    [
-                        16,
-                        23,
-                        "DURATION"
-                    ],
-                    [
-                        28,
-                        33,
-                        "ACTION"
-                    ],
-                    [
-                        34,
-                        40,
-                        "DIRECTION"
-                    ],
-                    [
-                        41,
-                        47,
-                        "ITERATION"
-                    ]
-                ]
-            }
-        ],
-        [
-            "Alok walks 7 steps and turns 45 deg clockwise.\r",
-            {
-                "entities": [
-                    [
-                        0,
-                        4,
-                        "CHARACTER"
-                    ],
-                    [
-                        5,
-                        10,
-                        "ACTION"
-                    ],
-                    [
-                        11,
-                        18,
-                        "ITERATION"
-                    ],
-                    [
-                        23,
-                        28,
-                        "ACTION"
-                    ],
-                    [
-                        29,
-                        35,
-                        "ANGLE"
-                    ],
-                    [
-                        36,
-                        45,
-                        "DIRECTION"
-                    ]
-                ]
-            }
-        ],
-        [
-            "Sakshi runs for 6 secs and sneaks 4 steps forward.\r",
+            "Ananya runs for 13secs and turns around thrice.\r",
             {
                 "entities": [
                     [
@@ -4237,17 +4174,91 @@
                     ],
                     [
                         27,
-                        33,
+                        32,
                         "ACTION"
                     ],
                     [
-                        34,
-                        41,
+                        33,
+                        39,
+                        "DIRECTION"
+                    ],
+                    [
+                        40,
+                        46,
+                        "ITERATION"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Alok walks 7steps and turns 45deg clockwise.\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        4,
+                        "CHARACTER"
+                    ],
+                    [
+                        5,
+                        10,
+                        "ACTION"
+                    ],
+                    [
+                        11,
+                        17,
                         "ITERATION"
                     ],
                     [
-                        42,
-                        49,
+                        22,
+                        27,
+                        "ACTION"
+                    ],
+                    [
+                        28,
+                        33,
+                        "ANGLE"
+                    ],
+                    [
+                        34,
+                        43,
+                        "DIRECTION"
+                    ]
+                ]
+            }
+        ],
+        [
+            "Sakshi runs for 6secs and sneaks 4steps forward.\r",
+            {
+                "entities": [
+                    [
+                        0,
+                        6,
+                        "CHARACTER"
+                    ],
+                    [
+                        7,
+                        11,
+                        "ACTION"
+                    ],
+                    [
+                        16,
+                        21,
+                        "DURATION"
+                    ],
+                    [
+                        26,
+                        32,
+                        "ACTION"
+                    ],
+                    [
+                        33,
+                        39,
+                        "ITERATION"
+                    ],
+                    [
+                        40,
+                        47,
                         "DIRECTION"
                     ]
                 ]
@@ -4270,7 +4281,7 @@
                     [
                         16,
                         21,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }
@@ -4292,7 +4303,7 @@
                     [
                         15,
                         20,
-                        "CHARACTER"
+                        "DESTINATION"
                     ],
                     [
                         25,
@@ -4303,7 +4314,7 @@
             }
         ],
         [
-            "Shreya comes to shock pose from lying pose in 3 secs.\r",
+            "Shreya comes to shock pose from lying pose in 3secs.\r",
             {
                 "entities": [
                     [
@@ -4313,24 +4324,24 @@
                     ],
                     [
                         16,
-                        26,
+                        21,
                         "END_POSE"
                     ],
                     [
                         32,
-                        42,
+                        37,
                         "START_POSE"
                     ],
                     [
                         46,
-                        52,
+                        51,
                         "DURATION"
                     ]
                 ]
             }
         ],
         [
-            "Rishi runs for 11 secs and turns around twice.\r",
+            "Rishi runs for 11secs and turns around twice.\r",
             {
                 "entities": [
                     [
@@ -4345,29 +4356,29 @@
                     ],
                     [
                         15,
-                        22,
+                        21,
                         "DURATION"
                     ],
                     [
-                        27,
-                        32,
+                        26,
+                        31,
                         "ACTION"
                     ],
                     [
-                        33,
-                        39,
+                        32,
+                        38,
                         "DIRECTION"
                     ],
                     [
-                        40,
-                        45,
+                        39,
+                        44,
                         "ITERATION"
                     ]
                 ]
             }
         ],
         [
-            "Samar walks 6 steps and turns 30 deg clockwise.\r",
+            "Samar walks 6steps and turns 30deg clockwise.\r",
             {
                 "entities": [
                     [
@@ -4382,29 +4393,29 @@
                     ],
                     [
                         12,
-                        19,
+                        18,
                         "ITERATION"
                     ],
                     [
-                        24,
-                        29,
+                        23,
+                        28,
                         "ACTION"
                     ],
                     [
-                        30,
-                        36,
+                        29,
+                        34,
                         "ANGLE"
                     ],
                     [
-                        37,
-                        46,
+                        35,
+                        44,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Isha runs for 8 secs and sneaks 3 steps forward.\r",
+            "Isha runs for 8secs and sneaks 3steps forward.\r",
             {
                 "entities": [
                     [
@@ -4419,22 +4430,22 @@
                     ],
                     [
                         14,
-                        20,
+                        19,
                         "DURATION"
                     ],
                     [
-                        25,
-                        31,
+                        24,
+                        30,
                         "ACTION"
                     ],
                     [
-                        32,
-                        39,
+                        31,
+                        37,
                         "ITERATION"
                     ],
                     [
-                        40,
-                        47,
+                        38,
+                        45,
                         "DIRECTION"
                     ]
                 ]
@@ -4457,7 +4468,7 @@
                     [
                         16,
                         21,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }
@@ -4479,7 +4490,7 @@
                     [
                         14,
                         19,
-                        "CHARACTER"
+                        "DESTINATION"
                     ],
                     [
                         24,
@@ -4490,7 +4501,7 @@
             }
         ],
         [
-            "Sanvi comes to shock pose from crouching pose in 2 secs.\r",
+            "Sanvi comes to shock pose from crouching pose in 2secs.\r",
             {
                 "entities": [
                     [
@@ -4500,24 +4511,24 @@
                     ],
                     [
                         15,
-                        25,
+                        20,
                         "END_POSE"
                     ],
                     [
                         31,
-                        45,
+                        40,
                         "START_POSE"
                     ],
                     [
                         49,
-                        55,
+                        54,
                         "DURATION"
                     ]
                 ]
             }
         ],
         [
-            "Rahul runs for 12 secs and turns around twice.\r",
+            "Rahul runs for 12secs and turns around twice.\r",
             {
                 "entities": [
                     [
@@ -4532,29 +4543,29 @@
                     ],
                     [
                         15,
-                        22,
+                        21,
                         "DURATION"
                     ],
                     [
-                        27,
-                        32,
+                        26,
+                        31,
                         "ACTION"
                     ],
                     [
-                        33,
-                        39,
+                        32,
+                        38,
                         "DIRECTION"
                     ],
                     [
-                        40,
-                        45,
+                        39,
+                        44,
                         "ITERATION"
                     ]
                 ]
             }
         ],
         [
-            "Vivek walks 5 steps and turns 60 deg clockwise.\r",
+            "Vivek walks 5steps and turns 60deg clockwise.\r",
             {
                 "entities": [
                     [
@@ -4569,29 +4580,29 @@
                     ],
                     [
                         12,
-                        19,
+                        18,
                         "ITERATION"
                     ],
                     [
-                        24,
-                        29,
+                        23,
+                        28,
                         "ACTION"
                     ],
                     [
-                        30,
-                        36,
+                        29,
+                        34,
                         "ANGLE"
                     ],
                     [
-                        37,
-                        46,
+                        35,
+                        44,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Aaradhya runs for 5 secs and sneaks 3 steps forward.\r",
+            "Aaradhya runs for 5secs and sneaks 3steps forward.\r",
             {
                 "entities": [
                     [
@@ -4606,22 +4617,22 @@
                     ],
                     [
                         18,
-                        24,
+                        23,
                         "DURATION"
                     ],
                     [
-                        29,
-                        35,
+                        28,
+                        34,
                         "ACTION"
                     ],
                     [
-                        36,
-                        43,
+                        35,
+                        41,
                         "ITERATION"
                     ],
                     [
-                        44,
-                        51,
+                        42,
+                        49,
                         "DIRECTION"
                     ]
                 ]
@@ -4644,7 +4655,7 @@
                     [
                         16,
                         20,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }
@@ -4666,7 +4677,7 @@
                     [
                         14,
                         19,
-                        "CHARACTER"
+                        "DESTINATION"
                     ],
                     [
                         24,
@@ -4687,24 +4698,19 @@
                     ],
                     [
                         16,
-                        26,
+                        21,
                         "END_POSE"
                     ],
                     [
                         32,
-                        44,
+                        39,
                         "START_POSE"
-                    ],
-                    [
-                        48,
-                        53,
-                        "DURATION"
                     ]
                 ]
             }
         ],
         [
-            "Rohan runs for 10 secs and turns around.\r",
+            "Rohan runs for 10secs and turns around.\r",
             {
                 "entities": [
                     [
@@ -4719,24 +4725,24 @@
                     ],
                     [
                         15,
-                        22,
+                        21,
                         "DURATION"
                     ],
                     [
-                        27,
-                        32,
+                        26,
+                        31,
                         "ACTION"
                     ],
                     [
-                        33,
-                        39,
+                        32,
+                        38,
                         "DIRECTION"
                     ]
                 ]
             }
         ],
         [
-            "Raju walks 3 steps forward, turns 30 deg clockwise, runs for 10 secs and stands.\r",
+            "Raju walks 3steps forward, turns 30deg clockwise, runs for 10secs and stands.\r",
             {
                 "entities": [
                     [
@@ -4751,42 +4757,42 @@
                     ],
                     [
                         11,
-                        18,
+                        17,
                         "ITERATION"
                     ],
                     [
-                        19,
-                        26,
+                        18,
+                        25,
                         "DIRECTION"
                     ],
                     [
-                        28,
-                        33,
+                        27,
+                        32,
                         "ACTION"
                     ],
                     [
-                        34,
-                        40,
+                        33,
+                        38,
                         "ANGLE"
                     ],
                     [
-                        41,
-                        50,
+                        39,
+                        48,
                         "DIRECTION"
                     ],
                     [
-                        52,
-                        56,
+                        50,
+                        54,
                         "ACTION"
                     ],
                     [
-                        61,
-                        68,
+                        59,
+                        65,
                         "DURATION"
                     ],
                     [
-                        73,
-                        79,
+                        70,
+                        76,
                         "ACTION"
                     ]
                 ]
@@ -4803,12 +4809,12 @@
                     ],
                     [
                         16,
-                        26,
+                        21,
                         "END_POSE"
                     ],
                     [
                         32,
-                        40,
+                        35,
                         "START_POSE"
                     ],
                     [
@@ -4834,9 +4840,9 @@
                         "ACTION"
                     ],
                     [
-                        16,
+                        21,
                         25,
-                        "BOADY_PART"
+                        "BODY_PART"
                     ]
                 ]
             }
@@ -4858,7 +4864,7 @@
                     [
                         16,
                         22,
-                        "CHARACTER"
+                        "DESTINATION"
                     ]
                 ]
             }

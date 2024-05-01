@@ -10,7 +10,13 @@ def nlp_ner():
     usenlp = UseNLP()
     entities_dict = usenlp.getner(ipText)
     print('The obtained named entities from the model are')
-    print(entities_dict)
+    
+    # Remove trailing and leading spaces from keys
+    cleaned_dict = {key.strip(): value for key, value in entities_dict.items()}
+
+    # Reverse keys and values
+    reversed_dict = {value: key for key, value in cleaned_dict.items()}
+    print(reversed_dict)
 
 if os.path.exists(model_path):
     print('model exists\n')

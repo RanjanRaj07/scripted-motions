@@ -11,7 +11,7 @@ class TrainNLP:
         doc_bin = DocBin()
         count = 0
 
-        f = open('./train-data/annotations.json')
+        f = open('./train-data/annot.json')
         train_data = json.load(f)
 
         #creating train.spacy from json file
