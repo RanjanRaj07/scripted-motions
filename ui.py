@@ -12,9 +12,32 @@ if not dir in sys.path:
 from nlp.nlp import run_nlp
 
 from Character import Character
+from CharacterCreator import CharacterCreator
 
 from run import run_script
 
+
+class MyCreatorPanelPropertyGroup(PropertyGroup):
+    
+    name : bpy.props.StringProperty(name = "Filename")
+    
+    path : bpy.props.StringProperty(
+        name = "Path",
+        description="Choose a directory:",
+        subtype='DIR_PATH'
+        )
+        
+    folder_exists : bpy.props.BoolProperty()
+    
+    pose_name : bpy.props.StringProperty(name = "Pose Name")
+    
+    action_name : bpy.props.StringProperty(name = "Action Name")
+    
+    start_frame : bpy.props.IntProperty(name = "Start Frame")
+    
+    end_frame : bpy.props.IntProperty(name = "End Frame")
+    
+    biped_action : bpy.props.StringProperty(name = "Biped Action Name")
 
 
 class MyPropertyGroup(PropertyGroup) :
@@ -66,8 +89,22 @@ class Creator_PT_Panel(ScriptedMotionPanel, bpy.types.Panel):
     bl_label = "Creator"
     
     def draw(self, context):
+        scene = context.scene
+        mytools = scene.my_tools 
         
-        self.layout.label(text="creator panel buttons")
+#        self.layout.label(text="creator panel buttons")
+        layout = self.layout
+        layout.operator("wm.savechar_operator")
+        
+        layout.label(text="character name : " + mytools.name)
+        print(mytools.folder_exists)
+        
+        row = layout.row()
+        if mytools.folder_exists == False:
+            row.enabled = False
+        row.operator("wm.savepose_operator")
+        row.operator("wm.saveaction_operator")
+        
 
 class Director_PT_Panel(ScriptedMotionPanel, bpy.types.Panel):
     bl_idname = "VIEW3D_PT_Director"
@@ -138,6 +175,79 @@ class RunScript_PT_Panel(ScriptedMotionPanel, bpy.types.Panel):
         mytool = scene.my_tool
         
         layout.operator("wm.runscript_operator")
+
+class SaveCharacterOperator(bpy.types.Operator) :
+    bl_label = "Save Character"
+    bl_idname = "wm.savechar_operator"
+    
+    def execute(self, context):
+        scene = context.scene
+        mytools = scene.my_tools
+        
+        character = CharacterCreator(mytools.name, mytools.path)
+        character.save()
+        if os.path.exists(os.path.join(mytools.path, mytools.name)):
+            mytools.folder_exists = True
+        return {'FINISHED'}
+    
+    def invoke(self, context, event):
+        return context.window_manager.invoke_props_dialog(self)
+    
+    def draw(self, context):
+        layout = self.layout
+        scene = context.scene
+        mytools = scene.my_tools
+        
+        layout.prop(mytools, "name")
+        layout.prop(mytools, "path")
+        
+class SavePoseOperator(bpy.types.Operator) :
+    bl_label = "Save Pose"
+    bl_idname = "wm.savepose_operator"
+    
+    def execute(self, context):
+        scene = context.scene
+        mytools = scene.my_tools
+        
+        character = CharacterCreator(mytools.name, mytools.path)
+        character.savePose(mytools.pose_name)
+        return {'FINISHED'}
+    
+    def invoke(self, context, event):
+        return context.window_manager.invoke_props_dialog(self)
+    
+    def draw(self, context):
+        layout = self.layout
+        scene = context.scene
+        mytools = scene.my_tools
+        
+        layout.prop(mytools, "pose_name")
+    
+    
+class SaveActionOperator(bpy.types.Operator) :
+    bl_label = "Save Action"
+    bl_idname = "wm.saveaction_operator"
+    
+    def execute(self, context):
+        scene = context.scene
+        mytools = scene.my_tools
+        
+        character = CharacterCreator(mytools.name, tools.path)
+        character.saveAction(mytools.action_name, mytools.start_frame, mytools.end_frame, mytools.biped_action)
+        return {'FINISHED'}
+    
+    def invoke(self, context, event):
+        return context.window_manager.invoke_props_dialog(self)
+    
+    def draw(self, context):
+        layout = self.layout
+        scene = context.scene
+        mytools = scene.my_tools
+        
+        layout.prop(mytools, "action_name")
+        layout.prop(mytools, "start_frame")
+        layout.prop(mytools, "end_frame")
+        layout.prop(mytools, "biped_action")
         
 class LoadCharacterOperator(bpy.types.Operator) :
     bl_label = "Load Character"
@@ -237,9 +347,13 @@ classes = (
     MyPropertyGroup,
     MyListPropertyGroup,
     MyDictPropertyGroup,
+    MyCreatorPanelPropertyGroup,
     Creator_PT_Panel,
     Director_PT_Panel,
     LoadCharacterOperator,
+    SaveCharacterOperator,
+    SavePoseOperator,
+    SaveActionOperator,
     InputTextOperator,
     RunScriptOperator,
     Pose_PT_Panel,
@@ -252,6 +366,7 @@ def register():
     from bpy.utils import register_class
     for cls in classes:
         register_class(cls)
+    bpy.types.Scene.my_tools = bpy.props.PointerProperty(type=MyCreatorPanelPropertyGroup)
     bpy.types.Scene.my_tool = bpy.props.PointerProperty(type=MyPropertyGroup)
     bpy.types.Scene.my_list = bpy.props.CollectionProperty(type=MyListPropertyGroup)
     bpy.types.Scene.my_dict = bpy.props.CollectionProperty(type=MyDictPropertyGroup)
