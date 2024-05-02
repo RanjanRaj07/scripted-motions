@@ -92,12 +92,10 @@ class Creator_PT_Panel(ScriptedMotionPanel, bpy.types.Panel):
         scene = context.scene
         mytools = scene.my_tools 
         
-#        self.layout.label(text="creator panel buttons")
         layout = self.layout
         layout.operator("wm.savechar_operator")
         
         layout.label(text="character name : " + mytools.name)
-        print(mytools.folder_exists)
         
         row = layout.row()
         if mytools.folder_exists == False:
@@ -188,6 +186,7 @@ class SaveCharacterOperator(bpy.types.Operator) :
         character.save()
         if os.path.exists(os.path.join(mytools.path, mytools.name)):
             mytools.folder_exists = True
+        ShowMessageBox("Character is saved!")
         return {'FINISHED'}
     
     def invoke(self, context, event):
@@ -211,6 +210,7 @@ class SavePoseOperator(bpy.types.Operator) :
         
         character = CharacterCreator(mytools.name, mytools.path)
         character.savePose(mytools.pose_name)
+        ShowMessageBox("Pose is saved!")
         return {'FINISHED'}
     
     def invoke(self, context, event):
@@ -234,6 +234,7 @@ class SaveActionOperator(bpy.types.Operator) :
         
         character = CharacterCreator(mytools.name, tools.path)
         character.saveAction(mytools.action_name, mytools.start_frame, mytools.end_frame, mytools.biped_action)
+        ShowMessageBox("Action is saved!")
         return {'FINISHED'}
     
     def invoke(self, context, event):
@@ -274,11 +275,13 @@ class LoadCharacterOperator(bpy.types.Operator) :
         char.name = character.name
         char.path = dirname
         
+        ShowMessageBox("Character Loaded in Scene")
+        
         return {'FINISHED'}
 
 
 class InputTextOperator(bpy.types.Operator) :
-    bl_label = "Enter Script"
+    bl_label = "Use Script"
     bl_idname = "wm.inputtext_operator"
     
     
@@ -310,6 +313,8 @@ class InputTextOperator(bpy.types.Operator) :
             if 'DESTINATION' in dict.keys():
 #                d = mydict.add()
                 d.destination = dict['DESTINATION']
+                
+        ShowMessageBox("Script Analyzed.")
             
         return {'FINISHED'}
 
@@ -340,8 +345,16 @@ class RunScriptOperator(bpy.types.Operator) :
 #        print(list_of_actions)
 #        print(list_of_characters)
         run_script(list_of_actions, list_of_characters)
+        ShowMessageBox("Animation Loaded.")
         return {'FINISHED'}
 
+
+def ShowMessageBox(message = "", title = "Message Box", icon = 'INFO'):
+
+    def draw(self, context):
+        self.layout.label(text=message)
+
+    bpy.context.window_manager.popup_menu(draw, title = title, icon = icon)
 
 classes = (
     MyPropertyGroup,
@@ -378,6 +391,7 @@ def unregister():
     del bpy.types.Scene.my_tool
     del bpy.types.Scene.my_list
     del bpy.types.Scene.my_dict
+    del bpy.types.Scene.my_tools
 
 
 if __name__ == "__main__":
