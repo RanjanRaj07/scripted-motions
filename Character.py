@@ -71,11 +71,14 @@ class Character:
         bpy.ops.object.mode_set(mode='OBJECT')
         bpy.ops.object.select_all(action='DESELECT')
 
-    def loadAction(self, actionName):
+    def loadAction(self, actionName, biped_action = ''):
         skeleton = bpy.data.objects["skeleton_" + self.name]
         if skeleton == None:
             return
-        f = open(os.path.join(self.path, "predef_actions",
+        predef_path = os.path.join(self.path, "predef_actions")
+        if biped_action != '':
+            predef_path = os.path.join(predef_path, biped_action)
+        f = open(os.path.join(predef_path,
                  actionName + '.json'), 'r')
 
         action_data = json.load(f)
@@ -191,4 +194,51 @@ class Character:
         bpy.context.scene.frame_set(end_frame)
         bpy.ops.object.mode_set(mode='OBJECT')
         bpy.ops.object.select_all(action='DESELECT')
+    
+    def loadBipedAction(self, actionName, num_of_steps):
+        if num_of_steps <= 0:
+            print('Number of steps should be 1 or more.')
+        else:
+            self.loadAction(actionName + '_right_from_standing', actionName)
+            step_num = 1
+            while step_num < num_of_steps:
+                if step_num % 2 != 0:
+                    self.loadAction(actionName + '_right_to_left', actionName)
+                else:
+                    self.loadAction(actionName + '_left_to_right', actionName)
+                step_num += 1
+            if step_num % 2 != 0:
+                self.loadAction(actionName + '_right_to_standing', actionName)
+            else:
+                self.loadAction(actionName + '_left_to_standing', actionName)
+    
+    def turn(self, angle):
+        if angle == 0:
+            return
+        turn_angle = angle % 360
+        if turn_angle > 180:
+            direction = 'right'
+            dir_factor = -1
+            turn_angle = 360 - turn_angle
+        else:
+            direction = 'left'
+            dir_factor = 1
+
+        times = 1
+        if turn_angle > 90:
+            times = 2
+            turn_angle = turn_angle * 0.5
+
+        skeleton = bpy.data.objects["skeleton_" + self.name]
+        root = skeleton.pose.bones['root']
+        root.rotation_mode = 'XYZ'
+
+        turn_angle = math.radians(turn_angle)
+        pre_angle = root.rotation_euler[2]
+
+        for x in range(times):
+            self.loadAction('turn_' + direction)
+            root.rotation_euler = (0, 0, pre_angle + (x + 1) * turn_angle * dir_factor)
+            root.keyframe_insert(data_path='rotation_euler',
+                                index=2, frame=bpy.context.scene.frame_current)
 # ------------------------------------------

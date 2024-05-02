@@ -3,6 +3,8 @@ import bpy
 import json
 
 # This class
+
+
 class CharacterCreator:
 
     def __init__(self, name, path):
@@ -89,31 +91,35 @@ class CharacterCreator:
         json.dump(pose_data, f, indent=4)
         f.close()
 
-    def saveAction(self, actionName, start_frame, end_frame):
+    def saveAction(self, actionName, start_frame, end_frame, biped_action_name=''):
         skeleton = bpy.data.objects['skeleton_' + self.name]
         bpy.context.view_layer.objects.active = skeleton
         bpy.ops.object.mode_set(mode='POSE')
 
-        f = open(os.path.join(self.path, "predef_actions",
+        folder = os.path.join(self.path, "predef_actions")
+        if biped_action_name != '':
+            folder = os.path.join(folder, biped_action_name)
+            if not os.path.exists(folder):
+                os.mkdir(folder)
+
+        f = open(os.path.join(folder,
                  actionName + '.json'), 'w', encoding='utf-8')
-        
+
         action_data = []
 
         fcurves = skeleton.animation_data.action.fcurves
 
         for fcurve in fcurves:
             keyframe_points = []
-            
+
             for keyframe in fcurve.keyframe_points:
                 if start_frame <= keyframe.co[0] <= end_frame:
-                    keyframe_points.append([keyframe.co[0] - start_frame,round(keyframe.co[1], 3)])
-            
-            action_data.append([fcurve.data_path,fcurve.array_index,keyframe_points])
+                    keyframe_points.append(
+                        [keyframe.co[0] - start_frame, round(keyframe.co[1], 3)])
+
+            action_data.append(
+                [fcurve.data_path, fcurve.array_index, keyframe_points])
 
         json.dump(action_data, f, indent=4)
         f.close()
 
-subbaRao = CharacterCreator('SubbaRao', 'D:\phani')
-#subbaRao.save()
-#subbaRao.savePose('walk_right')
-subbaRao.saveAction('walk_left_to_standing', 1, 13)

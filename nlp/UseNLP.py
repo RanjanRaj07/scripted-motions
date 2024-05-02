@@ -3,7 +3,7 @@ import spacy
 class UseNLP:
     def getner(self, ipText):
         #load the trained custome SpaCy nlp model
-        nlp_ner = spacy.load("./nlp-model/model-best")
+        nlp_ner = spacy.load("C:\\Sahithi\\projects\\major_project\\scripted-motions\\nlp\\nlp-model\\model-best")
 
         doc = nlp_ner(ipText)
 

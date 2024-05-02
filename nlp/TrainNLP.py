@@ -11,7 +11,7 @@ class TrainNLP:
         doc_bin = DocBin()
         count = 0
 
-        f = open('./train-data/annot.json')
+        f = open("C:\\Sahithi\\projects\\major_project\\scripted-motions\\nlp\\train-data\\annot.json")
         train_data = json.load(f)
 
         #creating train.spacy from json file
@@ -31,11 +31,11 @@ class TrainNLP:
                 doc_bin.add(doc)
 
         print(f'Train data added to train.spacy with {count} entites skiped\n')
-        doc_bin.to_disk("./nlp-model/train.spacy")
+        doc_bin.to_disk("C:\\Sahithi\\projects\\major_project\\scripted-motions\\nlp\\nlp-model\\train.spacy")
 
         try:
             #spaCy command to configure the blank nlp model
-            command1 = 'py -m spacy init fill-config ./nlp-model/base_config.cfg ./nlp-model/config.cfg'
+            command1 = 'py -m spacy init fill-config C:\\Sahithi\\projects\\major_project\\scripted-motions\\nlp\\nlp-model\\base_config.cfg C:\\Sahithi\\projects\\major_project\\scripted-motions\\nlp\\nlp-model\\config.cfg'
             exit_code1 = os.system(command1)
             if exit_code1==0:
                 print('model configered\n')
@@ -43,7 +43,7 @@ class TrainNLP:
                 print(f'command failed with exit code: {exit_code1}')
 
             #spaCy command to train the blank nlp model with the data in train.spacy
-            command2 = 'py -m spacy train ./nlp-model/config.cfg --output ./nlp-model --paths.train ./nlp-model/train.spacy --paths.dev ./nlp-model/train.spacy'
+            command2 = 'py -m spacy train C:\\Sahithi\\projects\\major_project\\scripted-motions\\nlp\\nlp-model\\config.cfg --output C:\\Sahithi\\projects\\major_project\\scripted-motions\\nlp\\nlp-model --paths.train C:\\Sahithi\\projects\\major_project\\scripted-motions\\nlp\\nlp-model\\train.spacy --paths.dev C:\\Sahithi\\projects\\major_project\\scripted-motions\\nlp\\nlp-model\\train.spacy'
             exit_code2 = os.system(command2)
             if exit_code2==0:
                 print('model trained\n')
